@@ -1,6 +1,6 @@
 data <- read.csv("household_power_consumption.txt", header = TRUE, sep = ";")
 data <- data[grep("^(1|2)/2/2007", data$Date),]
-# png("plot1.png", width = 480, height = 480)
+png("plot1.png", width = 480, height = 480)
 
 hist(
   as.numeric(as.character(data$Global_active_power)),
@@ -11,4 +11,4 @@ hist(
   ylab = "Frequency",
   main = "Global Active Power")
 
-# dev.off()
+dev.off()
